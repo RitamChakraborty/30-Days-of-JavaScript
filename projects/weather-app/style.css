@@ -4,6 +4,7 @@
 
 body {
     background: #1A120B;
+    font-family: sans-serif;
 }
 
 main {
@@ -19,7 +20,7 @@ article {
     border-radius: var(--unit);
 }
 
-nav {
+form {
     display: flex;
     gap: var(--unit);
 }
@@ -57,4 +58,8 @@ input:hover, input:active {
     background-color: white;
     border-radius: 50%;
     aspect-ratio: 1;
+}
+
+.search-btn:active {
+    transform: scale(0.9);
 }
