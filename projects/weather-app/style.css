@@ -3,6 +3,11 @@
     --primary-color-1: #46C2CB;
     --primary-color-2: #E5E5CB;
     --secondary-color: #2C3333;
+    --error-color: rgb(160, 24, 0);
+}
+
+* {
+    margin: 0;
 }
 
 [hidden] {
@@ -22,7 +27,7 @@ main {
 }
 
 section {
-    background-image: linear-gradient(-45deg, var(--primary-color-1) 0, var(--primary-color-2) 100%);
+    background-image: linear-gradient(-45deg, var(--primary-color-1) 20%, var(--primary-color-2) 100%);
     padding: 2rem;
     border-radius: var(--unit);
     display: grid;
@@ -111,4 +116,91 @@ input:active {
     to {
         margin-top: calc(var(--unit) / -1.5);
     }
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--unit) / 2.5);
+    color: var(--error-color);
+    font-family: monospace;
+}
+
+.error span {
+    font-size: var(--unit);
+}
+
+.weather {
+    display: grid;
+    color: white;
+    gap: var(--unit);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--unit);
+    padding: 0 var(--unit);
+    padding-top: var(--unit);
+}
+
+.heading-content {
+    display: grid;
+    gap: var(--unit);
+}
+
+.temp {
+    font-size: calc(var(--unit) * 3);
+}
+
+.weather-icon-placeholder {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+#weather-icon {
+    height: 100%;
+    object-fit: contain;
+}
+
+#city {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.information {
+    display: flex;
+}
+
+.information p {
+    text-align: center;
+}
+
+.info {
+    display: grid;
+    gap: calc(var(--unit) / 2); 
+}
+
+.humidity {
+    flex: 3
+}
+
+.wind-speed {
+    flex: 4;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--unit);
+}
+
+.flex i {
+    font-size: calc(var(--unit) * 3);
 }
