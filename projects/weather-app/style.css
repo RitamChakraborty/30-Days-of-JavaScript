@@ -21,7 +21,7 @@ main {
     padding: 2rem;
 }
 
-article {
+section {
     background-image: linear-gradient(-45deg, var(--primary-color-1) 0, var(--primary-color-2) 100%);
     padding: 2rem;
     border-radius: var(--unit);
@@ -92,19 +92,15 @@ input:active {
     background-color: var(--secondary-color);
     opacity: 0.5;
     filter: blur(0.5px);
-    animation: bounce 500ms forwards infinite alternate cubic-bezier(.37,.58,.7,1.22);
-}
-
-.loading span:nth-child(1) {
-    animation-delay: 0;
+    animation: bounce 300ms forwards infinite alternate cubic-bezier(.37,.58,.7,1.22);
 }
 
 .loading span:nth-child(2) {
-    animation-delay: 250ms;
+    animation-delay: 150ms;
 }
 
 .loading span:nth-child(3) {
-    animation-delay: 500ms;
+    animation-delay: 300ms;
 }
 
 @keyframes bounce {

@@ -4,13 +4,16 @@ const API_KEY = 'ujeBAIJqXIadTfNcv7PHN5p9OnQg4uiQ';
 const cityForm = document.querySelector('#city-form');
 const searchInput = document.querySelector('#search-input');
 const searchBtn = document.querySelector('#search-btn');
+const loading = document.querySelector(".loading");
 
 cityForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const city = searchInput.value;
-    if (city.value?.length === 0) return;
+    if (!city || city.length === 0) return;
     const url = getRequestUrl(city);
+    toggleLoading();
     await getWeatherData(url);
+    toggleLoading();
 });
 
 function getRequestUrl(location) {
@@ -24,4 +27,8 @@ async function getWeatherData(url) {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
+}
+
+function toggleLoading() {
+    loading.toggleAttribute('hidden');
 }
