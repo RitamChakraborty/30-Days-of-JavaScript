@@ -1,0 +1,60 @@
+:root {
+    --unit: 1rem;
+}
+
+body {
+    background: #1A120B;
+}
+
+main {
+    max-width: 30rem;
+    min-width: 20rem;
+    margin: clamp(3rem, 10vh, 10rem) auto;
+    padding: 2rem;
+}
+
+article {
+    background-image: linear-gradient(-45deg, #46C2CB 0, #E5E5CB 100%);
+    padding: 2rem;
+    border-radius: var(--unit);
+}
+
+nav {
+    display: flex;
+    gap: var(--unit);
+}
+
+.search, .search-btn {
+    height: calc(var(--unit) * 2.5);
+}
+
+.search {
+    flex: 1;
+    background-color: white;;
+    border-radius: calc(var(--unit) * 2.5);
+    display: flex;
+    align-items: center;
+    gap: calc(var(--unit) / 2);
+    padding: 0 var(--unit);
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex: 1;
+    font-size: var(--unit);
+}
+
+input:hover, input:active {
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
