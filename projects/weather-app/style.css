@@ -160,8 +160,6 @@ input:active {
 }
 
 .weather-icon-placeholder {
-    display: grid;
-    place-items: center;
     height: 100%;
 }
 
