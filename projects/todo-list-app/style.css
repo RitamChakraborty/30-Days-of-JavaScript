@@ -82,6 +82,21 @@ section {
     display: flex;
     flex-direction: column;
     gap: var(--unit);
+    overflow-y: auto;
+}
+
+section::-webkit-scrollbar {
+    width: calc(var(--unit) / 2);
+}
+
+section::-webkit-scrollbar-track {
+    background-color: var(--grey-200);
+    border-radius: 10px;
+}
+
+section::-webkit-scrollbar-thumb {
+    border-radius: var(--unit);
+    background-color: var(--grey-400);
 }
 
 article {
@@ -124,9 +139,5 @@ article[data-checked='checked'] .checked {
     main {
         border-radius: calc(var(--unit) * 2);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-
-    section {
-        overflow-y: auto;
     }
 }
