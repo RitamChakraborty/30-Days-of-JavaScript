@@ -28,15 +28,27 @@ class Todo {
     get done() {
         return this.#done;
     }
+
+    get json() {
+        return {
+            key: this.#key,
+            title: this.#title,
+            done: this.#done
+        };
+    }
 }
 
 const todoForm = $('#todo-form');
 const todoInput = $('#todo-input');
 const todoListElm = $('#todo-list');
-const todoList = {};
+let todoList = {};
 
 window.addEventListener('load', () => {
-    
+    const savedData = localStorage.getItem('todo-list');
+    if (savedData) {
+        todoList = JSON.parse(savedData);
+        renderTodos();
+    }
 }, false);
 
 todoForm.addEventListener('submit', (e) => {
@@ -44,7 +56,7 @@ todoForm.addEventListener('submit', (e) => {
     const inputValue = todoInput.value;
     if (!inputValue) return;
     const newTodo = new Todo(inputValue);
-    todoList[newTodo.key] = newTodo;
+    todoList[newTodo.key] = newTodo.json;
     renderTodos();
     e.target.reset();
 });
@@ -83,6 +95,7 @@ function renderTodos() {
         const todoElm = createTodoElement(todo);
         todoListElm.appendChild(todoElm);
     }
+    localStorage.setItem('todo-list', JSON.stringify(todoList));
 }
 
 function handleCheckTodo(key) {
