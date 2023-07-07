@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         nested: resolve(__dirname, 'projects/weather-app/index.html'),
+        nested: resolve(__dirname, 'projects/todo-list-app/index.html')
       },
     },
   },
