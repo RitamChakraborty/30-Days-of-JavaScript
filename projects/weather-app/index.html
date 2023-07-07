@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather App</title>
+  <script type="module" crossorigin src="/30-days-of-javascript/assets/nested-2e211622.js"></script>
+  <link rel="stylesheet" href="/30-days-of-javascript/assets/index-d92eb456.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <form id="city-form">
+                <div class="search">
+                    <input type="text" id="search-input" placeholder="enter city name">
+                </div>
+                <button id="search-btn" class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="loading" hidden>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="error" hidden>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>Unknown City</span>
+            </div>
+            <div class="weather" hidden>
+                <div class="heading">
+                    <div class="heading-content">
+                        <h2 id="behavior"></h2>
+                        <h1 class="temp"><span id="temp"></span><span>°C</span></h1>
+                    </div>
+                    <div class="weather-icon-placeholder">
+                        <img id="weather-icon" alt="Weather Icon">
+                    </div>
+                </div>
+                <div class="information">
+                    <div class="humidity info">
+                        <div class="flex">
+                            <i class="fa-solid fa-water"></i>
+                            <h2><span id="humidity"></span>%</h2>
+                        </div>
+                        <p>Humidity</p>
+                    </div>
+                    <div class="wind-speed info">
+                        <div class="flex">
+                            <i class="fa-solid fa-wind"></i>
+                            <h1><span id="wind-speed"></span> km/h</h1>
+                        </div>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <h3 id="city"></h3>
+            </div>
+        </section>
+    </main>
+    
+</body>
+
+</html>
