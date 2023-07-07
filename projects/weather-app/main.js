@@ -6,14 +6,20 @@ const searchInput = document.querySelector('#search-input');
 const searchBtn = document.querySelector('#search-btn');
 const loading = document.querySelector('.loading');
 const error = document.querySelector(".error");
+const weatherElm = document.querySelector('.weather');
+const weatherBehaviorElm = document.querySelector("#behavior");
+const weatherIconElm = document.querySelector("#weather-icon");
+const temperatureElm = document.querySelector("#temp");
+const humidityElm = document.querySelector("#humidity");
+const windSpeedElm = document.querySelector("#wind-speed");
+const cityElement = document.querySelector("#city");
 
 cityForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const city = searchInput.value;
     if (!city || city.length === 0) return;
     const url = getRequestUrl(city);
-    toggleLoading();
-    // error.hidden = true;
+    initializeState();
     const weatherData = await getWeatherData(url);
     if (weatherData) processWeatherData(weatherData);
     toggleLoading();
@@ -48,11 +54,40 @@ function toggleLoading() {
     loading.toggleAttribute('hidden');
 }
 
-function processWeatherData(data) {
-
+function initializeState() {
+    toggleLoading();
+    error.hidden = true;
+    weatherElm.hidden = true;
 }
 
-const weatherBehavior = {
+function processWeatherData(data) {
+    const values = data.data.values;
+    const weatherCode = values.weatherCode;
+    const weatherBehavior = getBehavior(weatherCode);
+    const weatherIcon = getWeatherIcon(weatherCode);
+    const temperature = values.temperature;
+    const humidity = values.humidity;
+    const windSpeed = values.windSpeed;
+    const city = data.location.name;
+    weatherElm.hidden = false;
+    weatherBehaviorElm.textContent = weatherBehavior;
+    weatherIconElm.src = `./assets/${weatherIcon}`;
+    temperatureElm.textContent = +temperature;
+    humidityElm.textContent = +humidity;
+    windSpeedElm.textContent = +windSpeed;
+    cityElement.textContent = city;
+    cityElement.setAttribute('title', city);
+}
+
+function getBehavior(weatherCode) {
+    return weatherBehaviors[+weatherCode];
+}
+
+function getWeatherIcon(weatherCode) {
+    return weatherIcons[+weatherCode];
+}
+
+const weatherBehaviors = {
     "0": "Unknown",
     "1000": "Clear, Sunny",
     "1100": "Mostly Clear",
