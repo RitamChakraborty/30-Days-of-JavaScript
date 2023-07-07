@@ -53,6 +53,7 @@ window.addEventListener('load', () => {
 
 todoForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    e.stopImmediatePropagation();
     const inputValue = todoInput.value;
     if (!inputValue) return;
     const newTodo = new Todo(inputValue);
@@ -95,6 +96,7 @@ function renderTodos() {
         const todoElm = createTodoElement(todo);
         todoListElm.appendChild(todoElm);
     }
+
     localStorage.setItem('todo-list', JSON.stringify(todoList));
 }
 
