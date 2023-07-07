@@ -117,6 +117,10 @@ article[data-checked='checked'] .checked {
 }
 
 @media screen and (min-width: 30rem) {
+    :root {
+        --unit: 1.25rem;
+    }
+
     body {
         padding: calc(var(--unit) * 2) 0;
     }
