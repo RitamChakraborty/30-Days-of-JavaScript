@@ -32,6 +32,7 @@ section {
     border-radius: var(--unit);
     display: grid;
     gap: var(--unit);
+    transition: 100ms;
 }
 
 form {
@@ -47,7 +48,6 @@ form {
 .search {
     flex: 1;
     background-color: white;
-    ;
     border-radius: calc(var(--unit) * 2.5);
     display: flex;
     align-items: center;
@@ -61,6 +61,7 @@ input {
     background-color: transparent;
     flex: 1;
     font-size: var(--unit);
+    width: 0;
 }
 
 input:hover,
@@ -139,10 +140,9 @@ input:active {
 
 .heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: var(--unit);
-    padding: 0 var(--unit);
     padding-top: var(--unit);
 }
 
@@ -156,11 +156,10 @@ input:active {
 }
 
 .temp {
-    font-size: calc(var(--unit) * 2.5);
+    font-size: calc(var(--unit) * 2);
 }
 
 .weather-icon-placeholder {
-    flex: 1;
     display: grid;
     place-items: center;
     height: 100%;
