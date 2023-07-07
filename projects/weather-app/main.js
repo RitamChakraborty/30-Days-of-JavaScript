@@ -71,7 +71,7 @@ function processWeatherData(data) {
     const city = data.location.name;
     weatherElm.hidden = false;
     weatherBehaviorElm.textContent = weatherBehavior;
-    weatherIconElm.src = `./assets/${weatherIcon}`;
+    weatherIconElm.src = new URL(`./assets/${weatherIcon}`, import.meta.url).href;
     temperatureElm.textContent = +temperature;
     humidityElm.textContent = +humidity;
     windSpeedElm.textContent = +windSpeed;
