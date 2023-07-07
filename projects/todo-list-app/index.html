@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Todo List</title>
 </head>
 
@@ -18,21 +19,20 @@
         </header>
         <nav>
             <form>
-                <input type="text" placeholder="I need to do...">
-                <input type="submit" value="Add">
+                <input id="todo-input" type="text" placeholder="I need to do...">
+                <input class="btn" type="submit" value="Add">
             </form>
         </nav>
         <section>
-            <article class="todo">
-                <i class="fa-regular fa-circle"></i>
+            <article class="todo" data-checked="checked">
+                <button>
+                    <i class="fa-regular fa-circle unchecked"></i>
+                    <i class="fa-solid fa-circle-check delete-todo checked"></i>
+                </button>
                 <span>Complete to-do list app</span>
-                <i class="fa-solid fa-xmark"></i>
-            </article>
-            <article class="todo">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Complete to-do list app</span>
-                <i class="fa-solid fa-xmark"></i>
-                skeliton
+                <button>
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </article>
         </section>
     </main>

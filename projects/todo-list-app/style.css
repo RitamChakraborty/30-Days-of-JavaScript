@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --bg-color: #4A55A2;
+    --primary-color: #FFFFFF;
+    --accent-color: #F24C3D;
+    --grey-900: #212121;
+    --grey-800: #424242;
+    --grey-400: #BDBDBD;
+    --grey-200: #EEEEEE;
+    --unit: 1rem;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    height: 100svh;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: var(--primary-color);
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--unit) * 1.5);
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--grey-900);
+}
+
+p,
+span {
+    color: var(--grey-800);
+}
+
+nav {
+    --_height: calc(var(--unit) * 3);
+    min-height: var(--_height);
+    background-color: var(--grey-200);
+    border-radius: var(--_height);
+    padding-left: var(--unit);
+}
+
+form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    font-size: var(--unit);
+    background-color: transparent;
+}
+
+#todo-input {
+    flex: 1
+}
+
+.btn {
+    height: 100%;
+    background-color: var(--accent-color);
+    color: var(--grey-200);
+    font-weight: bold;
+    padding: 0 calc(var(--unit) * 2);
+    border-radius: calc(var(--unit) * 3);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--unit);
+}
+
+article {
+    display: flex;
+    gap: calc(var(--unit) / 2);
+    align-items: center;
+}
+
+article>span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+article[data-checked='checked'] span {
+    text-decoration: line-through;
+}
+
+article[data-checked='unchecked'] .checked {
+    display: none;
+}
+
+article[data-checked='unchecked'] .unchecked {
+    color: var(--grey-400);
+}
+
+article[data-checked='checked'] .unchecked {
+    display: none;
+}
+
+article[data-checked='checked'] .checked {
+    color: var(--accent-color);
+}
+
+@media screen and (min-width: 30rem) {
+    body {
+        padding: calc(var(--unit) * 2) 0;
+    }
+
+    main {
+        border-radius: calc(var(--unit) * 2);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    section {
+        overflow-y: auto;
+    }
+}
