@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/30-days-of-javascript/',
+  base: '/30-Days-of-JavaScript/',
   build: {
     rollupOptions: {
       input: {
