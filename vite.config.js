@@ -7,8 +7,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        nested: resolve(__dirname, 'projects/weather-app/index.html'),
-        nested: resolve(__dirname, 'projects/todo-list-app/index.html')
+        weather_app: resolve(__dirname, 'projects/weather-app/index.html'),
+        todo_list_app: resolve(__dirname, 'projects/todo-list-app/index.html')
       },
     },
   },
