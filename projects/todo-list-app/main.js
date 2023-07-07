@@ -77,7 +77,7 @@ function createTodoElement(todo) {
     todoTitle.textContent = todo.title;
     todoTitle.setAttribute('title', todo.title);
 
-    const deleteButton = document.createElement('button');  
+    const deleteButton = document.createElement('button');
     deleteButton.addEventListener('click', () => handleDeleteTodo(todo.key));
     deleteButton.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
 
