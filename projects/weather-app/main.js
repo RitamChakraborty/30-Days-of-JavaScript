@@ -3,7 +3,6 @@ const API_KEY = 'ujeBAIJqXIadTfNcv7PHN5p9OnQg4uiQ';
 
 const cityForm = document.querySelector('#city-form');
 const searchInput = document.querySelector('#search-input');
-const searchBtn = document.querySelector('#search-btn');
 const loading = document.querySelector('.loading');
 const error = document.querySelector(".error");
 const weatherElm = document.querySelector('.weather');
