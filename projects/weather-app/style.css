@@ -151,8 +151,12 @@ input:active {
     gap: var(--unit);
 }
 
+#behavior {
+    font-size: calc(var(--unit) * 1.5);
+}
+
 .temp {
-    font-size: calc(var(--unit) * 3);
+    font-size: calc(var(--unit) * 2.5);
 }
 
 .weather-icon-placeholder {
@@ -203,4 +207,10 @@ input:active {
 
 .flex i {
     font-size: calc(var(--unit) * 3);
+}
+
+@media screen and (min-width: 30rem) {
+    :root {
+        --unit: 1.25rem;
+    }
 }
