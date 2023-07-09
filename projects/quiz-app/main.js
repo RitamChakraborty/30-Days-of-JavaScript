@@ -63,6 +63,8 @@ class Question {
 }
 
 const quizForm = $('#quiz-form');
+const questionList = new Array();
+const currentIndex = 0;
 
 quizForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -86,13 +88,6 @@ async function main() {
 };
 
 function startGame(questions) {
-    const questionsPlaceholder = $('#questions-placeholder');
-    questionsPlaceholder.toggleAttribute('hidden');
-    questionsPlaceholder.innerHtml = '';
-    const questionList = new Array();
-    const currentIndex = 0;
-    const maxIndex = questions.length;
-
     for (const question of questions) {
         const questionTitle = atob(question['question']);
         const correctAnswer = atob(question['correct_answer']);
@@ -103,8 +98,53 @@ function startGame(questions) {
         questionList.push(newQuestion);
     }
 
-    const newQuestionElm = getQuestionElement(questionList[currentIndex], currentIndex);
-    questionsPlaceholder.innerHTML = newQuestionElm.outerHTML;
+    setupQuestions(questionList[currentIndex], currentIndex);
+}
+
+function setupQuestions(question, index, answer) {
+    const questionsPlaceholder = $('#questions-placeholder');
+    questionsPlaceholder.innerHTML = '';
+    const newQuestionElm = getQuestionElement(question, index, answer);
+    questionsPlaceholder.appendChild(newQuestionElm);
+}
+
+function getQuestionElement(question, index, answer) {
+    const questionElm = document.createElement('article');
+    const questionHeader = document.createElement('h3');
+    questionHeader.textContent = `Q${index + 1}. ${question.question}`;
+    const optionsElm = document.createElement('div');
+    optionsElm.classList.add('options');
+    let isAnswered = answer;
+    let isCorrect = answer == question.correctAnswer;
+
+    for (const option of question.options) {
+        const optionBtn = document.createElement('button');
+        optionBtn.classList.add('option');
+
+        if (isAnswered && option == question.correctAnswer) {
+            optionBtn.classList.add('correct');
+        }
+
+        if (isAnswered && !isCorrect && option == answer) {
+            optionBtn.classList.add('wrong');
+        }
+
+        if (isAnswered) optionBtn.disabled = true;
+
+        optionBtn.textContent = option;
+        optionBtn.onclick = (e) => handleAnswer(option);
+        optionsElm.appendChild(optionBtn);
+    }
+
+    const navElm = document.createElement('nav');
+    navElm.innerHTML = `<button class="btn">Finish</button>`;
+
+    questionElm.append(questionHeader, optionsElm, navElm);
+    return questionElm;
+}
+
+function handleAnswer(option) {
+    setupQuestions(questionList[currentIndex], currentIndex, option);
 }
 
 function createRequestUrl(requestBody) {
@@ -121,25 +161,4 @@ async function getResponseData(url) {
     const response = await fetch(url);
     const data = await response.json();
     return data.results;
-}
-
-function getQuestionElement(question, index) {
-    const questionElm = document.createElement('article');
-    const questionHeader = document.createElement('h3');
-    questionHeader.textContent = `Q${index + 1}. ${question.question}`;
-    const optionsElm = document.createElement('div');
-    optionsElm.classList.add('options');
-
-    for (const option of question.options) {
-        const optionBtn = document.createElement('button');
-        optionBtn.classList.add('option');
-        optionBtn.textContent = option;
-        optionsElm.appendChild(optionBtn);
-    }
-
-    const navElm = document.createElement('nav');
-    navElm.innerHTML = `<button class="btn">Next</button><button class="btn">Finish</button>`;
-
-    questionElm.append(questionHeader, optionsElm, navElm);
-    return questionElm;
 }
