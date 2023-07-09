@@ -122,8 +122,9 @@ article nav {
 }
 
 .loading {
-    min-height: calc(var(--unit) / 4);
+    height: calc(var(--unit) / 4);
     width: calc(var(--unit) * 4);
+    margin: 0 auto;
 }
 
 .loading div {
@@ -148,7 +149,6 @@ article nav {
 
 @media screen and (min-width: 30rem) {
     main {
-        width: min-content;
         margin-top: calc(var(--unit) * 3);
         height: auto;
         border-radius: var(--unit);
