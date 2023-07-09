@@ -98,6 +98,10 @@ article {
     border: 1px solid var(--accent-color)
 }
 
+.option:disabled {
+    color: #555555;
+}
+
 .option:not(:disabled):hover {
     color: var(--primary-color);
     background-color: var(--accent-color);
