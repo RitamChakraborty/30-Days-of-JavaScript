@@ -144,6 +144,11 @@ function startGame(questions) {
         }
 
         const navElm = document.createElement('nav');
+        const finishBtn = document.createElement('button');
+        finishBtn.classList.add('btn');
+        finishBtn.textContent = 'Finish';
+        finishBtn.addEventListener('click', handleFinishQuiz);
+        navElm.appendChild(finishBtn);
 
         if (isAnswered && !isLastQuestion) {
             const nextBtn = document.createElement('button');
@@ -152,12 +157,6 @@ function startGame(questions) {
             nextBtn.addEventListener('click', handleNextQuestion);
             navElm.appendChild(nextBtn);
         }
-
-        const finishBtn = document.createElement('button');
-        finishBtn.classList.add('btn');
-        finishBtn.textContent = 'Finish';
-        finishBtn.addEventListener('click', handleFinishQuiz);
-        navElm.appendChild(finishBtn);
 
         questionElm.append(questionHeader, optionsElm, navElm);
         return questionElm;
