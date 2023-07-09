@@ -40,7 +40,6 @@ hr {
 form {
     display: grid;
     gap: var(--unit);
-    grid-template-columns: 1fr 1fr;
 }
 
 .form-control {
@@ -156,5 +155,9 @@ article nav {
         margin-top: calc(var(--unit) * 3);
         height: auto;
         border-radius: var(--unit);
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr;
     }
 }
