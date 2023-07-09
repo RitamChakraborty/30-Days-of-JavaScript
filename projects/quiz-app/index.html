@@ -15,15 +15,15 @@
         </header>
         <hr>
         <nav>
-            <form>
+            <form id="quiz-form">
                 <div class="form-control">
-                    <label for="trivia_amount">Question Count</label>
-                    <input type="number" name="trivia_amount" id="trivia_amount" class="form-control" min="1" max="50"
+                    <label for="count">Question Count</label>
+                    <input type="number" name="count" id="trivia_amount" class="form-control" min="1" max="50"
                         value="10">
                 </div>
                 <div class="form-control">
-                    <label for="trivia_category">Select Category</label>
-                    <select name="trivia_category" class="form-control">
+                    <label for="category">Select Category</label>
+                    <select name="category" class="form-control">
                         <option value="any">Any Category</option>
                         <option value="9">General Knowledge</option>
                         <option value="10">Books</option>
@@ -52,8 +52,8 @@
                     </select>
                 </div>
                 <div class="form-control">
-                    <label for="trivia_difficulty">Select Difficulty</label>
-                    <select name="trivia_difficulty" class="form-control">
+                    <label for="difficulty">Select Difficulty</label>
+                    <select name="difficulty" class="form-control">
                         <option value="any">Any Difficulty</option>
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
@@ -61,8 +61,8 @@
                     </select>
                 </div>
                 <div class="form-control">
-                    <label for="trivia_type">Select Type</label>
-                    <select name="trivia_type" class="form-control">&gt;
+                    <label for="type">Select Type</label>
+                    <select name="type" class="form-control">&gt;
                         <option value="any">Any Type</option>
                         <option value="multiple">Multiple Choice</option>
                         <option value="boolean">True / False</option>
