@@ -71,10 +71,27 @@
                 <button class="btn" type="submit">Start</button>
             </form>
         </nav>
-        <section>
+        <div class="loading" hidden>
+            <div></div>
+        </div>
+        <section id="questions-placeholder" hidden>
             <article>
-
+                <h3>Q1. What is the smallest country in the world?</h3>
+                <div class="options">
+                    <button class="option correct">Vatican City</button>
+                    <button class="option">Sri Lanka</button>
+                    <button class="option wrong">Nepal</button>
+                    <button class="option">Bhutan</button>
+                </div>
+                <nav>
+                    <button class="btn">Next</button>
+                    <button class="btn">Finish</button>
+                </nav>
             </article>
+        </section>
+        <section id="play-again" hidden>
+            <h2>You scared 8 out of 10</h2>
+            <button class="btn">Play Again</button>
         </section>
     </main>
     <script src="main.js" type="module"></script>

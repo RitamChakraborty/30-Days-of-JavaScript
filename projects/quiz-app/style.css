@@ -2,9 +2,11 @@
 
 :root {
     --unit: 1rem;
-    --primary-color: #FFFFFF; 
+    --primary-color: #FFFFFF;
     --accent-color: #2D4356;
     --secondary-color: #333333;
+    --correct-color: #a6dca6;
+    --wrong-color: #fa9898;
 }
 
 * {
@@ -46,11 +48,16 @@ form {
     gap: calc(var(--unit) * 0.5);
 }
 
-p, span, button, input, select {
+p,
+span,
+button,
+input,
+select {
     font-size: var(--unit);
 }
 
-input, select {
+input,
+select {
     padding: calc(var(--unit) * 0.25);
     outline: none;
     border: 1px solid var(--secondary-color);
@@ -62,16 +69,86 @@ input, select {
     padding: calc(var(--unit) * 0.5) var(--unit);
     border: none;
     outline: none;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: var(--primary-color);
     min-width: calc(var(--unit) * 6);
     width: min-content;
     border-radius: calc(var(--unit) * 0.25);
 }
 
+[hidden] {
+    display: none !important;
+}
+
+article {
+    display: grid;
+    gap: var(--unit);
+}
+
+.options {
+    display: grid;
+    gap: var(--unit);
+}
+
+.option {
+    text-align: start;
+    padding: calc(var(--unit) / 2);
+    transition: background-color color 200ms;
+    background-color: transparent;
+    border: 1px solid var(--accent-color)
+}
+
+.option:not(:disabled):hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+.option.correct {
+    background-color: var(--correct-color);
+}
+
+.option.wrong {
+    background-color: var(--wrong-color);
+}
+
+article nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#play-again {
+    display: grid;
+    gap: var(--unit);
+}
+
+.loading {
+    min-height: calc(var(--unit) / 4);
+    width: calc(var(--unit) * 4);
+}
+
+.loading div {
+    background-color: var(--accent-color);
+    height: 100%;
+    animation: loading 500ms forwards infinite alternate ease-in-out;
+}
+
+@keyframes loading {
+    0% {
+        margin-right: 100%;
+    }
+
+    50% {
+        margin-right: 0;
+    }
+
+    to {
+        margin-left: 100%;
+    }
+}
+
 @media screen and (min-width: 30rem) {
     main {
-    width: min-content;
+        width: min-content;
         margin-top: calc(var(--unit) * 3);
         height: auto;
         border-radius: var(--unit);
