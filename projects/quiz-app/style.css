@@ -1,0 +1,28 @@
+:root {
+    --unit: 1rem;
+}
+
+form {
+    display: grid;
+    gap: var(--unit);
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-control {
+    display: grid;
+    gap: calc(var(--unit) * 0.5);
+}
+
+p, span, button, input, select {
+    font-size: var(--unit);
+}
+
+input, select {
+    padding: calc(var(--unit) * 0.25);
+}
+
+.btn {
+    white-space: nowrap;
+    width: min-content;
+    padding: calc(var(--unit) * 0.5) var(--unit);
+}
