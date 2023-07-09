@@ -88,6 +88,9 @@ async function main() {
 };
 
 function startGame(questions) {
+    const questionList = new Array();
+    const currentIndex = 0;
+
     for (const question of questions) {
         const questionTitle = atob(question['question']);
         const correctAnswer = atob(question['correct_answer']);
@@ -98,53 +101,88 @@ function startGame(questions) {
         questionList.push(newQuestion);
     }
 
-    setupQuestions(questionList[currentIndex], currentIndex);
-}
+    setupQuestions(questionList[currentIndex], currentIndex, null, currentIndex === questions.length - 2);
 
-function setupQuestions(question, index, answer) {
-    const questionsPlaceholder = $('#questions-placeholder');
-    questionsPlaceholder.innerHTML = '';
-    const newQuestionElm = getQuestionElement(question, index, answer);
-    questionsPlaceholder.appendChild(newQuestionElm);
-}
-
-function getQuestionElement(question, index, answer) {
-    const questionElm = document.createElement('article');
-    const questionHeader = document.createElement('h3');
-    questionHeader.textContent = `Q${index + 1}. ${question.question}`;
-    const optionsElm = document.createElement('div');
-    optionsElm.classList.add('options');
-    let isAnswered = answer;
-    let isCorrect = answer == question.correctAnswer;
-
-    for (const option of question.options) {
-        const optionBtn = document.createElement('button');
-        optionBtn.classList.add('option');
-
-        if (isAnswered && option == question.correctAnswer) {
-            optionBtn.classList.add('correct');
-        }
-
-        if (isAnswered && !isCorrect && option == answer) {
-            optionBtn.classList.add('wrong');
-        }
-
-        if (isAnswered) optionBtn.disabled = true;
-
-        optionBtn.textContent = option;
-        optionBtn.onclick = (e) => handleAnswer(option);
-        optionsElm.appendChild(optionBtn);
+    function setupQuestions(question, index, answer, isLastQuestion) {
+        const questionsPlaceholder = $('#questions-placeholder');
+        questionsPlaceholder.innerHTML = '';
+        questionsPlaceholder.hidden = false;
+        const newQuestionElm = getQuestionElement(question, index, answer);
+        questionsPlaceholder.appendChild(newQuestionElm);
     }
 
-    const navElm = document.createElement('nav');
-    navElm.innerHTML = `<button class="btn">Finish</button>`;
+    function getQuestionElement(question, index, answer, isLastQuestion) {
+        const questionElm = document.createElement('article');
+        const questionHeader = document.createElement('h3');
+        questionHeader.textContent = `Q${index + 1}. ${question.question}`;
+        const optionsElm = document.createElement('div');
+        optionsElm.classList.add('options');
+        let isAnswered = answer;
+        let isCorrect = answer == question.correctAnswer;
 
-    questionElm.append(questionHeader, optionsElm, navElm);
-    return questionElm;
-}
+        for (const option of question.options) {
+            const optionBtn = document.createElement('button');
+            optionBtn.classList.add('option');
 
-function handleAnswer(option) {
-    setupQuestions(questionList[currentIndex], currentIndex, option);
+            if (isAnswered && option == question.correctAnswer) {
+                optionBtn.classList.add('correct');
+            }
+
+            if (isAnswered && !isCorrect && option == answer) {
+                optionBtn.classList.add('wrong');
+            }
+
+            if (isAnswered) optionBtn.disabled = true;
+
+            optionBtn.textContent = option;
+            optionBtn.onclick = (e) => handleAnswer(option);
+            optionsElm.appendChild(optionBtn);
+        }
+
+        const navElm = document.createElement('nav');
+
+        if (isAnswered && !isLastQuestion) {
+            const nextBtn = document.createElement('button');
+            nextBtn.classList.add('btn');
+            nextBtn.textContent = 'Next';
+            nextBtn.addEventListener('click', handleNextQuestion);
+            navElm.appendChild(nextBtn);
+        }
+
+        if (!isLastQuestion) {
+            const finishBtn = document.createElement('button');
+            finishBtn.classList.add('btn');
+            finishBtn.textContent = 'Finish';
+            finishBtn.addEventListener('click', handleFinishQuiz);
+            navElm.appendChild(finishBtn);
+        }
+
+        questionElm.append(questionHeader, optionsElm, navElm);
+        return questionElm;
+    }
+
+    function handleAnswer(option) {
+        setupQuestions(questionList[currentIndex], currentIndex, option);
+    }
+
+    function handleNextQuestion() {
+        console.log('next');
+    }
+
+    function handleFinishQuiz() {
+        const questionsPlaceholderElm = $('#questions-placeholder');
+        const playAgainElm = $('#play-again');
+        questionsPlaceholderElm.hidden = true;
+        playAgainElm.toggleAttribute('hidden');
+        const playAgainBtn = $('#play-again-btn');
+        playAgainBtn.addEventListener('click', handlePlayAgain);
+    }
+
+    function handlePlayAgain() {
+        const playAgainElm = $('#play-again');
+        playAgainElm.toggleAttribute('hidden');
+        $('#quiz-form').toggleAttribute('hidden');
+    }
 }
 
 function createRequestUrl(requestBody) {
