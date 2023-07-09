@@ -89,7 +89,8 @@ async function main() {
 
 function startGame(questions) {
     const questionList = new Array();
-    const currentIndex = 0;
+    let currentIndex = 0;
+    let correctCount = 0;
 
     for (const question of questions) {
         const questionTitle = atob(question['question']);
@@ -101,9 +102,9 @@ function startGame(questions) {
         questionList.push(newQuestion);
     }
 
-    setupQuestions(questionList[currentIndex], currentIndex, null, currentIndex === questions.length - 2);
+    setupQuestions(questionList[currentIndex], currentIndex, null);
 
-    function setupQuestions(question, index, answer, isLastQuestion) {
+    function setupQuestions(question, index, answer) {
         const questionsPlaceholder = $('#questions-placeholder');
         questionsPlaceholder.innerHTML = '';
         questionsPlaceholder.hidden = false;
@@ -111,14 +112,16 @@ function startGame(questions) {
         questionsPlaceholder.appendChild(newQuestionElm);
     }
 
-    function getQuestionElement(question, index, answer, isLastQuestion) {
+    function getQuestionElement(question, index, answer) {
         const questionElm = document.createElement('article');
         const questionHeader = document.createElement('h3');
-        questionHeader.textContent = `Q${index + 1}. ${question.question}`;
+        questionHeader.textContent = `${index + 1}/${questionList.length}. ${question.question}`;
         const optionsElm = document.createElement('div');
         optionsElm.classList.add('options');
         let isAnswered = answer;
         let isCorrect = answer == question.correctAnswer;
+        const isLastQuestion = currentIndex === questions.length - 1;
+        console.log(isLastQuestion);
 
         for (const option of question.options) {
             const optionBtn = document.createElement('button');
@@ -135,7 +138,7 @@ function startGame(questions) {
             if (isAnswered) optionBtn.disabled = true;
 
             optionBtn.textContent = option;
-            optionBtn.onclick = (e) => handleAnswer(option);
+            optionBtn.onclick = (e) => handleAnswer(option, option == question.correctAnswer);
             optionsElm.appendChild(optionBtn);
         }
 
@@ -149,24 +152,24 @@ function startGame(questions) {
             navElm.appendChild(nextBtn);
         }
 
-        if (!isLastQuestion) {
-            const finishBtn = document.createElement('button');
-            finishBtn.classList.add('btn');
-            finishBtn.textContent = 'Finish';
-            finishBtn.addEventListener('click', handleFinishQuiz);
-            navElm.appendChild(finishBtn);
-        }
+        const finishBtn = document.createElement('button');
+        finishBtn.classList.add('btn');
+        finishBtn.textContent = 'Finish';
+        finishBtn.addEventListener('click', handleFinishQuiz);
+        navElm.appendChild(finishBtn);
 
         questionElm.append(questionHeader, optionsElm, navElm);
         return questionElm;
     }
 
-    function handleAnswer(option) {
+    function handleAnswer(option, isCorrect) {
         setupQuestions(questionList[currentIndex], currentIndex, option);
+        if (isCorrect) ++correctCount;
     }
 
     function handleNextQuestion() {
-        console.log('next');
+        ++currentIndex;
+        setupQuestions(questionList[currentIndex], currentIndex, null, currentIndex === questions.length - 2);
     }
 
     function handleFinishQuiz() {
