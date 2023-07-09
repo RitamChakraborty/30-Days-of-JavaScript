@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Quiz App</title>
+  <script type="module" crossorigin src="/30-Days-of-JavaScript/assets/quiz_app-0c206732.js"></script>
+  <link rel="modulepreload" crossorigin href="/30-Days-of-JavaScript/assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="/30-Days-of-JavaScript/assets/index-9f60f0bd.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Simple Quiz App</h1>
+        </header>
+        <hr>
+        <nav>
+            <form id="quiz-form">
+                <div class="form-control">
+                    <label for="count">Question Count</label>
+                    <input type="number" name="count" id="trivia_amount" class="form-control" min="1" max="50"
+                        value="5">
+                </div>
+                <div class="form-control">
+                    <label for="category">Select Category</label>
+                    <select name="category" class="form-control">
+                        <option value="any">Any Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Books</option>
+                        <option value="11">Film</option>
+                        <option value="12">Music</option>
+                        <option value="13">Musicals &amp; Theatres</option>
+                        <option value="14">Television</option>
+                        <option value="15">Video Games</option>
+                        <option value="16">Board Games</option>
+                        <option value="17">Nature</option>
+                        <option value="18">sinceComputers</option>
+                        <option value="19">sinceMathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Comics</option>
+                        <option value="30">Gadgets</option>
+                        <option value="31">Japanese Anime & Manga</option>
+                        <option value="32">Cartoon & Animations</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="difficulty">Select Difficulty</label>
+                    <select name="difficulty" class="form-control">
+                        <option value="any">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="type">Select Type</label>
+                    <select name="type" class="form-control">&gt;
+                        <option value="any">Any Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True / False</option>
+                    </select>
+                </div>
+                <button class="btn" type="submit">Start</button>
+            </form>
+        </nav>
+        <div class="loading" hidden>
+            <div></div>
+        </div>
+        <section id="questions-placeholder"></section>
+        <section id="play-again" hidden>
+            <h2 id="score"></h2>
+            <button id="play-again-btn" class="btn">Play Again</button>
+        </section>
+    </main>
+    
+</body>
+
+</html>
