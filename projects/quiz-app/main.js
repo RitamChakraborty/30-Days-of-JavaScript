@@ -79,11 +79,11 @@ async function main() {
     const type = formData['type'].value;
     const requestBody = new RequestBody(count, category, difficulty, type);
     const loadingElm = $('.loading');
-    quizForm.toggleAttribute('hidden');
-    loadingElm.toggleAttribute('hidden');
+    quizForm.hidden = true;
+    loadingElm.hidden = false;
     const url = createRequestUrl(requestBody);
     const responseData = await getResponseData(url);
-    loadingElm.toggleAttribute('hidden');
+    loadingElm.hidden = true;
     startGame(responseData);
 };
 
@@ -101,6 +101,8 @@ function startGame(questions) {
         const newQuestion = new Question(questionTitle, options, correctAnswer, type);
         questionList.push(newQuestion);
     }
+
+    console.log(questionList);
 
     setupQuestions(questionList[currentIndex], currentIndex, null);
 
@@ -121,7 +123,6 @@ function startGame(questions) {
         let isAnswered = answer;
         let isCorrect = answer == question.correctAnswer;
         const isLastQuestion = currentIndex === questions.length - 1;
-        console.log(isLastQuestion);
 
         for (const option of question.options) {
             const optionBtn = document.createElement('button');
@@ -176,15 +177,16 @@ function startGame(questions) {
         const questionsPlaceholderElm = $('#questions-placeholder');
         const playAgainElm = $('#play-again');
         questionsPlaceholderElm.hidden = true;
-        playAgainElm.toggleAttribute('hidden');
+        playAgainElm.hidden = false;
         const playAgainBtn = $('#play-again-btn');
         playAgainBtn.addEventListener('click', handlePlayAgain);
+        $('#score').textContent = `You scored ${correctCount} out of ${questionList.length}`;
     }
 
     function handlePlayAgain() {
         const playAgainElm = $('#play-again');
-        playAgainElm.toggleAttribute('hidden');
-        $('#quiz-form').toggleAttribute('hidden');
+        playAgainElm.hidden = true;
+        $('#quiz-form').hidden = false;
     }
 }
 
