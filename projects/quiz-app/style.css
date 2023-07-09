@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --unit: 1rem;
+    --primary-color: #FFFFFF; 
+    --accent-color: #2D4356;
+    --secondary-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--accent-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    background-color: var(--primary-color);
+    height: 100vh;
+    height: 100svh;
+    margin: 0 auto;
+    padding: calc(var(--unit) * 2) calc(var(--unit) * 1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--unit);
+    max-width: 30rem;
+}
+
+hr {
+    border: none;
+    background-color: var(--secondary-color);
+    height: 1px;
 }
 
 form {
@@ -19,10 +52,28 @@ p, span, button, input, select {
 
 input, select {
     padding: calc(var(--unit) * 0.25);
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: calc(var(--unit) * 0.25);
 }
 
 .btn {
     white-space: nowrap;
-    width: min-content;
     padding: calc(var(--unit) * 0.5) var(--unit);
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    min-width: calc(var(--unit) * 6);
+    width: min-content;
+    border-radius: calc(var(--unit) * 0.25);
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+    width: min-content;
+        margin-top: calc(var(--unit) * 3);
+        height: auto;
+        border-radius: var(--unit);
+    }
 }
