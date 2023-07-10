@@ -33,6 +33,7 @@ function createNoteElm(note) {
     textarea.addEventListener('focusout', handleNoteElmFocusOut);
     textarea.textContent = note.note;
     const deleteNoteBtn = document.createElement('button');
+    deleteNoteBtn.addEventListener('click', handleDeleteNoteBtnClick);
     deleteNoteBtn.innerHTML = `<span class="material-icons">delete</span>`;
     noteElm.append(textarea, deleteNoteBtn);
     return noteElm;
@@ -67,10 +68,29 @@ function updateNoteInLocalStorage(note) {
     localStorage.setItem('notes', JSON.stringify(newData));
 }
 
+function removeNoteFromLocalStorage(id) {
+    const notes = getNotesFromLocalStorage();
+    const newData = [];
+
+    for (const i of notes) {
+        if (i.id === id) continue;
+        newData.push(i);
+    }
+
+    localStorage.setItem('notes', JSON.stringify(newData));
+}
+
 function handleNoteElmFocusOut(e) {
     const textarea = e.target.parentElement;
     const noteData = e.target.value;
     const noteId = textarea.id;
     const note = {'id': noteId, 'note': noteData };
     updateNoteInLocalStorage(note);
+}
+
+function handleDeleteNoteBtnClick(e) {
+    const noteElm = e.target.parentElement.parentElement;
+    const noteId = noteElm.id;
+    notesElm.removeChild(noteElm);
+    removeNoteFromLocalStorage(noteId);
 }
