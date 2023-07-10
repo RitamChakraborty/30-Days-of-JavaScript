@@ -14,3 +14,4 @@ A 30 days JavaScript challenge hosted by [GreatStack YouTube Channel](https://ww
 | 2 | Todo List App | [todo-list-app-ritam](https://todo-list-app-ritam.netlify.app/) | 07/07/2023 |
 | 3 | Quiz App | [quiz-app-ritam](https://quiz-app-ritam.netlify.app/) | 08/07/2023 - 09/07/2023 |
 | 4 | Password Generator App | [password-generator-ritam](https://password-generator-app-ritam.netlify.app/) | 10/07/2023 |
+| 5 | Notes App | [notes-app-ritam](https://notes-app-ritam.netlify.app/) | 10/07/2023 | 
