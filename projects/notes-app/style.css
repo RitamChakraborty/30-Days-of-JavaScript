@@ -115,9 +115,9 @@ textarea {
     border-radius: calc(var(--unit) * 0.25);
 }
 
-textarea:focus, template:active {
-    border: none;
-    outline: none;
+textarea:is(:focus, :active) {
+    outline: calc(var(--unit) * 0.25) solid var(--grey-100);
+    outline-offset: calc(var(--unit) * 0.25);
 }
 
 textarea::-webkit-scrollbar {
