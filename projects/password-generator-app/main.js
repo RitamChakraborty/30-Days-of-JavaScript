@@ -3,7 +3,7 @@ function $(selector) {
 }
 
 const passwordOutput = $('#password');
-const copyPasswordBtn = $('copy-password-btn');
+const copyPasswordBtn = $('#copy-password-btn');
 const generatePasswordBtn = $('#generate-password-btn');
 const upperCaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const lowerCaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -32,6 +32,7 @@ generatePasswordBtn.addEventListener('click', handleGeneratePasswordBtnClick);
 
 function handleGeneratePasswordBtnClick() {
     const password = generatePassword();
+    passwordOutput.value = password;
 }
 
 function generatePassword() {
