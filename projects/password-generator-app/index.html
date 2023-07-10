@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Password Generator App</title>
 </head>
+
 <body>
     <main>
         <header>
@@ -15,11 +18,21 @@
         <section>
             <div class="password-output">
                 <input id="password" type="text" placeholder="Password" disabled>
-                <button id="copy-password-btn">Copy</button>
+                <button id="copy-password-btn">
+                    <span class="material-icons">
+                        content_copy
+                    </span>
+                </button>
             </div>
-            <button id="generate-password-btn">Generate Password</button>
+            <button id="generate-password-btn" class="btn">
+                <span class="material-icons">
+                    bolt
+                </span>
+                <span>Generate Password</span>
+            </button>
         </section>
     </main>
     <script src="main.js" type="module"></script>
 </body>
+
 </html>

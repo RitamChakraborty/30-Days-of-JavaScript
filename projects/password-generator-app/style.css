@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+    --unit: 1rem;
+    --primary-color: #4C0033;
+    --secondary-color: #f1f1f1;
+    --accent-color: #6f976a;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--unit) * 2);
+    padding: 0 clamp(var(--unit), 10vw, calc(var(--unit) * 10));
+    height: 100vh;
+    justify-content: center;
+    max-width: 40rem;
+}
+
+header {
+    display: grid;
+    gap: calc(var(--unit) * 0.5);
+}
+
+h2 {
+    font-size: calc(var(--unit) * 1.75);
+}
+
+h1 {
+    font-size: calc(var(--unit) * 2);
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: calc(var(--unit) * 0.5) 0;
+    white-space: nowrap;
+    width: min-content;
+}
+
+section {
+    display: grid;
+    gap: var(--unit);
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: var(--unit);
+    padding: var(--unit);
+    width: min-content;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+.btn:active, .btn:focus {
+    border: none;
+    outline: none;
+}
+
+input, button {
+    border-radius: calc(var(--unit) * 0.5);
+}
+
+.password-output {
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    height: calc(var(--unit) * 3);
+    border-radius: calc(var(--unit) * 0.5);
+}
+
+input {
+    flex: 1;
+    font-size: var(--unit);
+    border: none;
+    outline: none;
+    padding: 0 var(--unit);
+}
+
+input:disabled {
+    background: var(--secondary-color);
+}
+
+#copy-password-btn {
+    border:none;
+    outline: none;
+    opacity: 0.75;
+}
+
+#copy-password-btn:active {
+    opacity: 1;
+}
