@@ -20,8 +20,8 @@ addNodeBtn.addEventListener('click', handleAddNodeBtnClick);
 
 function handleAddNodeBtnClick() {
     const newNoteId = btoa(+Math.random());
-    const newNoteElm = createNoteElm(newNoteId);
     const newNote = {id: newNoteId, note: ''};
+    const newNoteElm = createNoteElm(newNote);
     saveNoteToLocalStorage(newNote);
     notesElm.insertBefore(newNoteElm, notesElm.firstChild);
 }
@@ -41,14 +41,14 @@ function createNoteElm(note) {
 
 function getNotesFromLocalStorage() {
     let notesString = localStorage.getItem('notes');
-    if (!notesString) return [];
+    if (notesString === null || notesString === undefined) return [];
     return JSON.parse(notesString);
 }
 
 function saveNoteToLocalStorage(note) {
     let notes = [];
     let notesString = localStorage.getItem('notes');
-    if (notesString) notes = JSON.parse(notesString);
+    if (notesString !== null && notesString !== undefined) notes = JSON.parse(notesString);
     notes = [note, ...notes];
     localStorage.setItem('notes', JSON.stringify(notes));
 }
@@ -81,9 +81,9 @@ function removeNoteFromLocalStorage(id) {
 }
 
 function handleNoteElmFocusOut(e) {
-    const textarea = e.target.parentElement;
+    const noteElm = e.target.parentElement;
     const noteData = e.target.value;
-    const noteId = textarea.id;
+    const noteId = noteElm.id;
     const note = {'id': noteId, 'note': noteData };
     updateNoteInLocalStorage(note);
 }
