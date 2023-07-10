@@ -9,7 +9,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         weather_app: resolve(__dirname, 'projects/weather-app/index.html'),
         todo_list_app: resolve(__dirname, 'projects/todo-list-app/index.html'),
-        quiz_app: resolve(__dirname, 'projects/quiz-app/index.html')
+        quiz_app: resolve(__dirname, 'projects/quiz-app/index.html'),
+        password_generator_app: resolve(__dirname, 'projects/password_generator_app/index.html')
       },
     },
   },
