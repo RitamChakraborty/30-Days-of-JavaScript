@@ -50,3 +50,9 @@ function generatePassword() {
 
     return password;
 }
+
+copyPasswordBtn.addEventListener('click', handleCopyPasswordBtn);
+
+function handleCopyPasswordBtn() {
+    navigator.clipboard.writeText(passwordOutput.value);
+}
