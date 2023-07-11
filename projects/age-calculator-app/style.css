@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Unbounded:wght@600&display=swap');
+
+:root {
+    --color-acent: #A2FF86;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(-200deg, #1212b7 0, #accbe5 100%);
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Unbounded', cursive;
+    font-size: 2.5rem;
+    color: white;
+}
+
+h1:last-child {
+    color: var(--color-acent);
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: clamp(2rem, 15vw, 10rem);
+    margin-right: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+header {
+    display: grid;
+    gap: 1rem;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+}
+
+input {
+    flex: 1;
+    background-color: white;
+}
+
+button {
+    background-color: var(--color-acent);
+    padding: 0.5rem 1.25rem;
+}
