@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #F7C8E0;
+    --primary-color: #FFFFFF;
+    --accent-color: #95BDFF;
+    --gray-900: #212121;
+    --grey-800: #424242;
+    --grey-700: #616161;
+    --grey-400: #BDBDBD;
+    --grey-200: #EEEEEE;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    max-width: 30rem;
+    margin: auto;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+h1 {
+    color: var(--grey-900);
+}
+
+h2 {
+    text-align: center;
+    color: var(--grey-800);
+}
+
+h3 {
+    align-self: flex-end;
+    color: var(--grey-800);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        height: min-content;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    min-width: 10rem;
+    background-color: var(--accent-color);
+    border-radius: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+button:is(:hover, :active) {
+    border: none;
+    outline: none;
+}
+
+#share-tweet {
+    border: 2px solid var(--grey-400);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#share-tweet svg {
+    height: 1.25rem;
+    fill: var(--accent-color);
+    align-items: center;
+}
