@@ -8,7 +8,7 @@
 :root {
     --bg-color: #F7C8E0;
     --primary-color: #FFFFFF;
-    --accent-color: #95BDFF;
+    --accent-color: #689ef5;
     --gray-900: #212121;
     --grey-800: #424242;
     --grey-700: #616161;
@@ -24,6 +24,7 @@ body {
 main {
     max-width: 30rem;
     margin: auto;
+    min-height: 50vh;
     height: 100vh;
     height: 100svh;
     display: flex;
@@ -38,11 +39,24 @@ main {
 
 h1 {
     color: var(--grey-900);
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.5rem;
+    background-color: var(--accent-color);
 }
 
 h2 {
     text-align: center;
     color: var(--grey-800);
+    flex: 1;
 }
 
 h3 {
@@ -76,11 +90,17 @@ button {
     border-radius: 4rem;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 0.75px;
 }
 
 button:is(:hover, :active) {
     border: none;
     outline: none;
+}
+
+button:disabled {
+    filter: opacity(0.5);
 }
 
 #share-tweet {
@@ -90,6 +110,7 @@ button:is(:hover, :active) {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    color: var(--accent-color);
 }
 
 #share-tweet svg {
