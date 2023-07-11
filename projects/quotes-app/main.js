@@ -8,6 +8,7 @@ const newQuoteBtn = $('#new-quote');
 const shareTweetBtn = $('#share-tweet');
 
 window.addEventListener('load', onLoad);
+newQuoteBtn.addEventListener('click', onLoad);
 
 async function onLoad() {
     showLoadingState();
