@@ -12,6 +12,7 @@ export default defineConfig({
         quiz_app: resolve(__dirname, 'projects/quiz-app/index.html'),
         password_generator_app: resolve(__dirname, 'projects/password-generator-app/index.html'),
         notes_app: resolve(__dirname, 'projects/notes-app/index.html'),
+        age_calculator_app: resolve(__dirname, 'projects/age-calculator-app/index.html'),
         quotes_app: resolve(__dirname, 'projects/quotes-app/index.html')
       },
     },
