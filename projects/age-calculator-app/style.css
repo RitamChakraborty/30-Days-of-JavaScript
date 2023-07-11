@@ -17,7 +17,7 @@ body {
 
 h1 {
     font-family: 'Unbounded', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
 }
 
@@ -29,8 +29,8 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding-left: clamp(2rem, 15vw, 10rem);
-    margin-right: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: grid;
     gap: 2rem;
 }
@@ -45,10 +45,12 @@ section {
     padding: 2rem;
     border-radius: 0.5rem;
     display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-input, button {
+input,
+button {
     border: none;
     outline: none;
     padding: 0.5rem 0.75rem;
@@ -64,4 +66,22 @@ input {
 button {
     background-color: var(--color-acent);
     padding: 0.5rem 1.25rem;
+}
+
+footer {
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+        padding-left: clamp(2rem, 15vw, 10rem);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        flex-direction: row;
+    }
 }
