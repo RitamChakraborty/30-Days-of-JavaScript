@@ -34,7 +34,6 @@ main {
     gap: 1.5rem;
     padding: 2rem;
     background-color: var(--primary-color);
-    border-radius: 1rem;
 }
 
 h1 {
@@ -65,19 +64,9 @@ h3 {
 }
 
 .buttons {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    gap: 5rem;
-}
-
-@media screen and (min-width: 30rem) {
-    main {
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        height: min-content;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    }
 }
 
 button {
@@ -117,4 +106,16 @@ button:disabled {
     height: 1.25rem;
     fill: var(--accent-color);
     align-items: center;
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        height: min-content;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 1rem;
+
+    }
 }
