@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";document.querySelector("#generate-qr-btn").addEventListener("click",n);function n(){const e=document.querySelector("#input").value;if(!e)return;const t=document.querySelector("#qr");new QRious({element:t,value:e}),t.style.display="block"}

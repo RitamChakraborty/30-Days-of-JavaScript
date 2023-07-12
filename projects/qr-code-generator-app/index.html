@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    
+    <title>QR Code Generator App</title>
+  <script type="module" crossorigin src="/30-Days-of-JavaScript/assets/qr_code_generator_app-1f188cb1.js"></script>
+  <link rel="modulepreload" crossorigin href="/30-Days-of-JavaScript/assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="/30-Days-of-JavaScript/assets/index-ad8a7f31.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h3>Enter your text or URL</h3>
+        </header>
+        <section>
+            <input type="text" name="input" id="input" placeholder="Text or URL">
+            <canvas id="qr"></canvas>
+            <button id="generate-qr-btn">Generate QR Code</button>
+            <a href="https://www.youtube.com/@GreatStackDev" target="_blank">Watch More Videos</a>
+        </section>
+    </main>
+
+    <div hidden>
+        <h1>QR Code using qrious</h1>
+        <form>
+            <input type="url" id="website" name="website" placeholder="https://webisora.com" required />
+            <button type="button" onclick="generateQRCode()">
+                Generate QR Code
+            </button>
+        </form>
+
+        <div id="qrcode-container">
+            <canvas id="qrcode" class="qrcode"></canvas>
+            <h4>With some styles</h4>
+            <canvas id="qrcode-2" class="qrcode"></canvas>
+        </div>
+    </div>
+    
+</body>
+
+</html>
