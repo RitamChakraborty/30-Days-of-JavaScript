@@ -5,12 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>QR Code Generator App</title>
 </head>
 
 <body>
+    <main>
+        <header>
+            <h3>Enter your text or URL</h3>
+        </header>
+        <section>
+            <input type="text" name="input" id="input" placeholder="Text or URL">
+            <canvas id="qr"></canvas>
+            <button id="generate-qr-btn">Generate QR Code</button>
+            <a href="https://www.youtube.com/@GreatStackDev" target="_blank">Watch More Videos</a>
+        </section>
+    </main>
 
-    <div class="form">
+    <div hidden>
         <h1>QR Code using qrious</h1>
         <form>
             <input type="url" id="website" name="website" placeholder="https://webisora.com" required />
