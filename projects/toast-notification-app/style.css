@@ -41,7 +41,13 @@ main {
     min-width: clamp(20rem, 25vw, 25rem);
     padding: 2rem;
     z-index: 1000;
+}
+
+.toast {
+    background-color: var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     animation: appear 500ms forwards ease-out;
+    position: relative;
 }
 
 @keyframes appear {
@@ -52,12 +58,6 @@ main {
     to {
         right: 50%;
     }
-}
-
-.toast {
-    width: 100%;
-    background-color: var(--primary-color);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .tile {
