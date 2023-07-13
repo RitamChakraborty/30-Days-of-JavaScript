@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --bg-color: #E1E1E1;
     --primary-color: #FAFAFA;
@@ -9,6 +11,7 @@
 
 body {
     background-color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -35,7 +38,7 @@ main {
     gap: 1rem;
     overflow: hidden;
     max-height: 100vh;
-    min-width: clamp(15rem, 25vw, 20rem);
+    min-width: clamp(20rem, 25vw, 25rem);
     padding: 2rem;
     z-index: 1000;
     animation: appear 500ms forwards ease-out;
