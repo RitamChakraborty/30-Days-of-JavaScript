@@ -1,0 +1,75 @@
+:root {
+    --color-primary: #FAFAFA;
+    --color-secondary: #3A3A3A;
+    --color-accent: #916f2a;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    height: 100svh;
+}
+
+main {
+    display: grid;
+    gap: 3rem;
+    place-items: center;
+    height: min-content;
+    background-image: url('assets/background.jpg');
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    border: solid;
+    width: clamp(20rem, 50vw, 30rem);
+    padding: 3rem 0;
+    color: var(--color-primary);
+}
+
+.countdown {
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: xxx-large;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.controls button {
+    background-color: transparent;
+    height: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls span {
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+#start {
+    height: 3.5rem;
+    background-color: var(--color-accent);
+    border: none;
+}
+
+#start span {
+    font-size: 2rem;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
