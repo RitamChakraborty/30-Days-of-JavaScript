@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player App</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <nav>
+            <button>Back</button>
+            <button>Menu</button>
+        </nav>
+        <main>
+            <section class="music">
+                <article class="album-art">
+                    <img src="http://picsum.photos/200/200" alt="Album Art">
+                </article>
+                <article class="song">
+                    <p class="title">Time in a Bottle</p>
+                    <p class="singer">Jim Crow</p>
+                </article>
+                <article>
+                    <input type="range" id="playback">
+                </article>
+            </section>
+            <section class="controls">
+                <button>Prev</button>
+                <button id="play-pause">Play</button>
+                <button>Next</button>
+            </section>
+        </main>
+    </div>
 </body>
+
 </html>
