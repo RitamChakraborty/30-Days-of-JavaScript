@@ -24,9 +24,10 @@
             </button>
         </nav>
         <main>
+            <audio id="audio" src="asssets/song.mp3"></audio>
             <section class="music">
                 <article class="album-art">
-                    <img src="http://picsum.photos/200/200" alt="Album Art">
+                    <img src="asssets/album-art.jpg" alt="Album Art">
                 </article>
                 <article class="song">
                     <p class="title">Time in a Bottle</p>
@@ -42,9 +43,12 @@
                         fast_rewind
                     </span>
                 </button>
-                <button id="play-pause">
-                    <span class="material-icons">
+                <button id="play-pause" class="play">
+                    <span class="material-icons play-icon">
                         play_arrow
+                    </span>
+                    <span class="material-icons pause-icon">
+                        pause
                     </span>
                 </button>
                 <button>
@@ -55,6 +59,7 @@
             </section>
         </main>
     </div>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

@@ -153,6 +153,14 @@ nav span {
     color: var(--color-primary);
 }
 
+#play-pause.play .pause-icon {
+    display: none;
+} 
+
+#play-pause.pause .play-icon {
+    display: none;
+}
+
 @media screen and (min-width: 30rem) {
     .container {
         max-width: 25rem;
