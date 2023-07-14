@@ -4,14 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Music Player App</title>
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <button>Back</button>
-            <button>Menu</button>
+            <button>
+                <span class="material-icons">
+                    arrow_back_ios_new
+                    </span>
+            </button>
+            <button>
+                <span class="material-icons">
+                    menu
+                </span>
+            </button>
         </nav>
         <main>
             <section class="music">
@@ -22,14 +32,26 @@
                     <p class="title">Time in a Bottle</p>
                     <p class="singer">Jim Crow</p>
                 </article>
-                <article>
-                    <input type="range" id="playback">
-                </article>
+            </section>
+            <section class="slider">
+                <input type="range" id="slider" value="0" min="0" max="100">
             </section>
             <section class="controls">
-                <button>Prev</button>
-                <button id="play-pause">Play</button>
-                <button>Next</button>
+                <button>
+                    <span class="material-icons">
+                        fast_rewind
+                    </span>
+                </button>
+                <button id="play-pause">
+                    <span class="material-icons">
+                        play_arrow
+                    </span>
+                </button>
+                <button>
+                    <span class="material-icons">
+                        fast_forward
+                    </span>
+                </button>
             </section>
         </main>
     </div>
