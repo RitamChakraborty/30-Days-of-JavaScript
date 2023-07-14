@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Music Player App</title>
+  <script type="module" crossorigin src="/30-Days-of-JavaScript/assets/music_player_app-2cceafb0.js"></script>
+  <link rel="modulepreload" crossorigin href="/30-Days-of-JavaScript/assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="/30-Days-of-JavaScript/assets/index-1a73b8bd.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <button>
+                <span class="material-icons">
+                    arrow_back_ios_new
+                    </span>
+            </button>
+            <button>
+                <span class="material-icons">
+                    menu
+                </span>
+            </button>
+        </nav>
+        <main>
+            <audio id="audio" src="asssets/song.mp3"></audio>
+            <section class="music">
+                <article class="album-art">
+                    <img src="/30-Days-of-JavaScript/assets/album-art-411ba3f6.jpg" alt="Album Art">
+                </article>
+                <article class="song">
+                    <p class="title">Time in a Bottle</p>
+                    <p class="singer">Jim Crow</p>
+                </article>
+            </section>
+            <section class="slider">
+                <input type="range" id="slider" value="0" min="0" max="100">
+            </section>
+            <section class="controls">
+                <button>
+                    <span class="material-icons">
+                        fast_rewind
+                    </span>
+                </button>
+                <button id="play-pause" class="play">
+                    <span class="material-icons play-icon">
+                        play_arrow
+                    </span>
+                    <span class="material-icons pause-icon">
+                        pause
+                    </span>
+                </button>
+                <button>
+                    <span class="material-icons">
+                        fast_forward
+                    </span>
+                </button>
+            </section>
+        </main>
+    </div>
+    
+</body>
+
+</html>
