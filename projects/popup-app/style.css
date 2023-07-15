@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --bg-color: #635985;
+    --primary-color: #FAFAFA;
+    --secondary-color: #1A1A1A;
+    --accent-color: #8B9A46;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+#submit {
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: min-content;
+    width: min-content;
+}
+
+#dialog {
+    border: none;
+    width: 20rem;
+    inset: 0;
+    margin: auto;
+    background-color: transparent;
+    overflow: visible;
+    animation: appear 500ms forwards;
+}
+
+@keyframes appear {
+    from {
+        top: -200%;
+        scale: 0
+    }
+
+    to {
+        top: 0;
+        scale: 1;
+    }
+}
+
+#dialog::backdrop {
+    background-color: transparent;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+}
+
+h1, p {
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+p {
+    margin: 0 1rem;
+}
+
+.done {
+    height: 3rem;
+    aspect-ratio: 1;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px 0px;
+}
+
+.done span {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+#dialog button {
+    width: 100%;
+    padding: 0.5rem ;
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--primary-color);
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
