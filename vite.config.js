@@ -18,7 +18,8 @@ export default defineConfig({
         toast_notification_app: resolve(__dirname, 'projects/toast-notification-app/index.html'),
         music_player_app: resolve(__dirname, 'projects/music-player-app/index.html'),
         stop_watch_app: resolve(__dirname, 'projects/stopwatch-app/index.html'),
-        calculator_app: resolve(__dirname, 'projects/calculator-app/index.html')
+        calculator_app: resolve(__dirname, 'projects/calculator-app/index.html'),
+        popup_app: resolve(__dirname, 'projects/popup-app/index.html')
       },
     },
   },
