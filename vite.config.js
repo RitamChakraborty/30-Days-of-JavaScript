@@ -19,7 +19,8 @@ export default defineConfig({
         music_player_app: resolve(__dirname, 'projects/music-player-app/index.html'),
         stop_watch_app: resolve(__dirname, 'projects/stopwatch-app/index.html'),
         calculator_app: resolve(__dirname, 'projects/calculator-app/index.html'),
-        popup_app: resolve(__dirname, 'projects/popup-app/index.html')
+        popup_app: resolve(__dirname, 'projects/popup-app/index.html'),
+        password_toggle_app: resolve(__dirname, 'projects/password-toggle-app/index.html')
       },
     },
   },
