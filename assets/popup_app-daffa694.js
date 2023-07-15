@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";const e=document.querySelector("#dialog"),t=document.querySelector("#submit"),o=document.querySelector("#ok");t.addEventListener("click",()=>{e.showModal()});o.addEventListener("click",()=>{e.close()});
