@@ -1,0 +1,41 @@
+body {
+    background-color: #0C134F;
+}
+
+main {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: min-content;
+    width: min-content;
+    display: flex;
+    gap: 0.5rem;
+    background-color: #FAFAFA;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+input, button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+}
+
+input:is(:focus, :active) {
+    border: none;
+    outline: none;
+}
+
+.show-hide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide .hidden {
+    display: none;
+}
+
+.show .visible {
+    display: none;
+}
