@@ -24,3 +24,4 @@ A 30 days JavaScript challenge hosted by [GreatStack YouTube Channel](https://ww
 | 12 | Calculator App | [calculator-app-ritam](https://calculator-app-ritam.netlify.app/) | 14/07/2023 - 15/07/2023 |
 | 13 | Popup App | [popup-app-ritam](https://popup-app-ritam.netlify.app/) | 15/07/2023 |
 | 14 | Password Toggle App | [password-toggle-app-ritam](https://password-toggle-app-ritam.netlify.app/) | 15/07/2023 |
+| 15 | Light Dark Mode Toggle App | [light-dark-mode-toggle-app-ritam](https://light-dark-mode-toggle-app-ritam.netlify.app/) | 16/07/2023 - 17/07/2023 | 
