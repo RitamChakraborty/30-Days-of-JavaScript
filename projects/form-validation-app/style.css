@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #3b023b;
+}
+
+main {
+    max-width: 30rem;
+    padding: 2rem 1rem;
+    position: relative;
+    margin: 0 1rem;
+    margin-top: 3rem;
+    background-color: #FAFAFA;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logo {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 10px;
+}
+
+form {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    gap: 1rem;
+}
+
+lebel {
+    padding: 0.5rem 0;
+}
+
+.input {
+    display: flex;
+    position: relative;
+}
+
+.input span {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.input span.success {
+    color: #417c41;
+}
+
+.input span.error {
+    color: rgb(255, 63, 29)
+}
+
+input, textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #888888;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+input:is(:focus, :active), textarea:is(:focus, :active) {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #888888;
+}
+
+button {
+    background-color: #3b023b;
+    height: 2rem;
+    width: min-content;
+    min-width: 7rem;
+    border-radius: 0.25rem;
+    color: #FAFAFA;
+    align-self: center;
+}
