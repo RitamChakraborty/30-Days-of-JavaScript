@@ -22,7 +22,8 @@ export default defineConfig({
         popup_app: resolve(__dirname, 'projects/popup-app/index.html'),
         password_toggle_app: resolve(__dirname, 'projects/password-toggle-app/index.html'),
         light_dark_mode_toggle_app: resolve(__dirname, 'projects/light-dark-mode-toggle-app/index.html'),
-        form_validation_app: resolve(__dirname, 'projects/form-validation-app/index.html')
+        form_validation_app: resolve(__dirname, 'projects/form-validation-app/index.html'),
+        image_slider_app: resolve(__dirname, 'projects/image-slider-app/index.html')
       },
     },
   },
