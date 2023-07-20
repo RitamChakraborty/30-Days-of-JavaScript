@@ -27,6 +27,7 @@ section {
     padding: 0 0.5rem;
     overflow-x: scroll;
     overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 section::-webkit-scrollbar {
