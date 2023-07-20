@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Light Dark Mode Toggle App</title>
+  <script type="module" crossorigin src="/30-Days-of-JavaScript/assets/light_dark_mode_toggle_app-d9585318.js"></script>
+  <link rel="modulepreload" crossorigin href="/30-Days-of-JavaScript/assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="/30-Days-of-JavaScript/assets/index-c8b9b2b9.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="data:image/png;base64,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" alt="logo">
+            </div>
+            <nav class="ms ls">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Portfolio</li>
+                    <li>Service</li>
+                    <li>Hire Me</li>
+                    <li>
+                        <div class="theme-toggle">
+                            <span class="material-icons light">
+                                light_mode
+                            </span>
+                            <span class="material-icons dark">
+                                dark_mode
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-btn ss">
+                <button>
+                    <span class="material-icons">
+                        menu
+                    </span>
+                </button>
+                <dialog class="nav-dialog">
+                    <nav>
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Portfolio</li>
+                            <li>Service</li>
+                            <li>Hire Me</li>
+                            <li>
+                                <div class="theme-toggle-mobile">
+                                    <span class="material-icons light">
+                                        light_mode
+                                    </span>
+                                    <span class="material-icons dark">
+                                        dark_mode
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </dialog>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="intro">
+                <div class="heading">
+                    <h1 class="display1">I'm <span class="color-accent">Ritam</span></h1>
+                    <h1 class="display1">Chakraborty</h1>
+                </div>
+                <p>This is my official website to showcase all of my works related to web development and UI design.</p>
+                <button>Download CV</button>
+            </div>
+            <div class="avatar">
+                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                            <stop id="stop1" stop-color="rgba(248, 117, 55, 1)" offset="0%"
+                                data-darkreader-inline-stopcolor="" style="--darkreader-inline-stopcolor: #a93a06;">
+                            </stop>
+                            <stop id="stop2" stop-color="rgba(231, 75, 59, 1)" offset="100%"
+                                data-darkreader-inline-stopcolor="" style="--darkreader-inline-stopcolor: #a32114;">
+                            </stop>
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#sw-gradient)"
+                        d="M20.1,-21.8C23.8,-16.4,23,-8.2,23.6,0.6C24.2,9.5,26.3,18.9,22.6,26.8C18.9,34.6,9.5,40.9,0.1,40.8C-9.3,40.7,-18.5,34.2,-25.8,26.4C-33,18.5,-38.3,9.3,-37.7,0.7C-37,-8,-30.4,-15.9,-23.2,-21.3C-15.9,-26.7,-8,-29.5,0.1,-29.6C8.2,-29.8,16.4,-27.2,20.1,-21.8Z"
+                        width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                        style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+                </svg>
+                <img src="/30-Days-of-JavaScript/assets/avatar-345abcbe.png" alt="Avatar">
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+</html>
