@@ -63,7 +63,7 @@ form {
 
 input {
     padding: 0.5rem;
-    width: 15rem
+    width: 15rem;
 }
 
 input, button {
@@ -86,4 +86,33 @@ button {
     background-color: #3f873f;
     color: #FAFAFA;
     font-size: large;
+}
+
+#submit-btn.loading .send {
+    display: none;
+}
+
+#submit-btn.loading .spinner {
+    display: initial;
+}
+
+#submit-btn:not(.loading) .send {
+    display: initial;
+}
+
+#submit-btn:not(.loading) .spinner {
+    display: none;
+}
+
+.spinner {
+    animation: spin 1s forwards infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
