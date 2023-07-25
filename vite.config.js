@@ -26,7 +26,8 @@ export default defineConfig({
         form_validation_app: resolve(__dirname, 'projects/form-validation-app/index.html'),
         image_slider_app: resolve(__dirname, 'projects/image-slider-app/index.html'),
         email_subscription_app: resolve(__dirname, 'projects/email-subscription-app/index.html'),
-        password_strength_app: resolve(__dirname, 'projects/password-strength-app/index.html')
+        password_strength_app: resolve(__dirname, 'projects/password-strength-app/index.html'),
+        text_to_speech_converter_app: resolve(__dirname, 'projects/text-to-speech-converter-app/index.html')
       },
     },
   },
