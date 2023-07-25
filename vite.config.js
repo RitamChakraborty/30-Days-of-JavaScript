@@ -25,7 +25,8 @@ export default defineConfig({
         light_dark_mode_toggle_app: resolve(__dirname, 'projects/light-dark-mode-toggle-app/index.html'),
         form_validation_app: resolve(__dirname, 'projects/form-validation-app/index.html'),
         image_slider_app: resolve(__dirname, 'projects/image-slider-app/index.html'),
-        email_subscription_app: resolve(__dirname, 'projects/email-subscription-app/index.html')
+        email_subscription_app: resolve(__dirname, 'projects/email-subscription-app/index.html'),
+        password_strength_app: resolve(__dirname, 'projects/password-strength-app/index.html')
       },
     },
   },
