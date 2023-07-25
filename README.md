@@ -27,4 +27,5 @@ A 30 days JavaScript challenge hosted by [GreatStack YouTube Channel](https://ww
 | 15 | Light Dark Mode Toggle App | [light-dark-mode-toggle-app-ritam](https://light-dark-mode-toggle-app-ritam.netlify.app/) | 16/07/2023 - 17/07/2023 | 
 | 16 | Form Validation App | [form-validation-app-ritam](https://form-validation-app-ritam.netlify.app/) | 17/07/2023 - 18/07/2023 |
 | 17 | Image Slider App | [image-slider-app-ritam](https://image-slider-app-ritam.netlify.app/) | 19/07/2023 - 20/07/2023 |
-| 18 | Email Subscription App | [email-subscription-app-ritam](https://email-subscription-app.netlify.app/) | 24/07/2023 - 25/07/2023 |
+| 18 | Email Subscription App | [email-subscription-app-ritam](https://email-subscription-app.netlify.app/) | 21/07/2023 - 25/07/2023 |
+| 19 | Password Strength App | [password-strength-app-ritam](https://password-strength-app-ritam.netlify.app/) | 25/07/2023 |
