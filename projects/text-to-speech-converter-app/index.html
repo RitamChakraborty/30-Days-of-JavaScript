@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Text to Speech Converter</title>
 </head>
 <body>
-    
+    <main>
+        <h1>
+            <span>Text to Speech</span>
+            <span class="converter">Converter</span>
+        </h1>
+        <form>
+            <textarea name="message" id="message"></textarea>
+            <select name="voice" id="voice">
+
+            </select>
+            <button id="listen" type="submit">
+                <span class="material-icons">
+                    play_arrow
+                </span>                
+                <span>Listen</span>
+            </button>
+        </form>
+    </main>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

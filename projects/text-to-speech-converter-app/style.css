@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+    --clr-bg: #27214e;
+    --clr-primary: #7d598f;
+    --clr-accent: #a35b5b;
+    --clr-text: #FAFAFA;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.converter {
+    color: var(--clr-accent);
+    border-bottom: 3px solid var(--clr-text);
+}
+
+main {
+    position: absolute;
+    inset: 0;
+    height: min-content;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 25rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+#message {
+    grid-column: 1 / -1;
+    resize: none;
+    height: 8rem;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    padding: 0.5rem;
+    background-color: var(--clr-primary);
+}
+
+#voice {
+    grid-column: 1 / 4;
+    background-color: var(--clr-primary);
+}
+
+select, button {
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+}
+
+#listen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: var(--clr-accent);
+}
+
+:where(textarea, select, button) {
+    border: none;
+    outline: none;
+    color: var(--clr-text);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+:where(textarea, select, button):is(:hover, :active) {
+    border: none;
+    outline: none
+}
