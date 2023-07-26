@@ -44,6 +44,50 @@ main {
     justify-content: center;
     gap: 1rem;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+main * {
+    position: relative;
+}
+
+.rocket {
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    right: 0;
+    bottom: -15rem;
+    animation: launch 5s forwards infinite ease-in;
+}
+
+@keyframes launch  {
+    from {
+        bottom: -15rem;
+    }
+
+    to {
+        bottom: calc(100vh + 15rem);
+    }
+}
+
+.rocket img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    z-index: -1;
+    transform: rotate(-45deg);
+    animation: fade-in 5s forwards infinite linear;
+}
+
+@keyframes fade-in {
+    0%, 25% {
+        opacity: 0;
+    }
+
+    50%, 75%, 100% {
+        opacity: 1;
+    }
+
 }
 
 main h1 {
