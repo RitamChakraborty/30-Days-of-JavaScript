@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    overflow: hidden;
+    background-color: rgb(90, 34, 142);
+    background-image: url(./assets/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.container {
+    max-width: 30rem;
+    padding: 1rem;
+    margin-inline: auto;
+}
+
+header {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-family: serif;
+}
+
+.accent {
+    color: rgb(165, 84, 70);
+}
+
+main {
+    height: calc(92vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+main h1 {
+    font-size: 3rem;
+}
+
+.time {
+    display: flex;
+    gap: 2rem
+}
+
+.time h2 {
+    font-size: 2.5rem;
+}
+
+button {
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 45rem) {
+    .container {
+        max-width: 45rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .container {
+        max-width: 64rem;
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .container {
+        max-width: 80rem;
+    }
+}
