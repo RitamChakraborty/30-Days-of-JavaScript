@@ -28,7 +28,7 @@ export default defineConfig({
         email_subscription_app: resolve(__dirname, 'projects/email-subscription-app/index.html'),
         password_strength_app: resolve(__dirname, 'projects/password-strength-app/index.html'),
         text_to_speech_converter_app: resolve(__dirname, 'projects/text-to-speech-converter-app/index.html'),
-        coming_soon_app: resolve(__dirname, 'projects/comings-soon-app/index.html')
+        coming_soon_app: resolve(__dirname, 'projects/coming-soon-app/index.html')
       },
     },
   },
