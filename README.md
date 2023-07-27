@@ -33,3 +33,4 @@ A 30 days JavaScript challenge hosted by [GreatStack YouTube Channel](https://ww
 | 21 | Coming Soon App | [coming-soon-app-ritam](https://coming-soon-app-ritam.netlify.app/) | 26/07/2023 | 
 | 22 | Image Background Transition App | [image-background-transition-app](https://image-background-transition-app-ritam.netlify.app/) | 27/07/2023 |
 | 23 | Mini Calendar App | [mini-calendar-app-ritam](https://mini-calendar-app-ritam.netlify.app/) | 27/07/2023 |
+| 24 | Custom Select Box App | [cutom-select-box-app-ritam](https://custom-select-box-app-ritam.netlify.app/) | 27/07/2023 |
