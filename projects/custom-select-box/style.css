@@ -23,10 +23,16 @@ main {
     background-color: #DADADA;
     border-radius: 0.25rem;
     padding: 0 1rem;
+    cursor: pointer;
 }
 
 .select img {
     height: 1.5rem;
+    transition: 200ms;
+}
+
+.selecting img {
+    rotate: 180deg;
 }
 
 dialog {
@@ -44,6 +50,7 @@ dialog {
     align-items: center;
     gap: 1rem;
     padding: 0 1rem;
+    cursor: pointer;
 }
 
 .tile:hover {
