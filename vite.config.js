@@ -30,7 +30,8 @@ export default defineConfig({
         text_to_speech_converter_app: resolve(__dirname, 'projects/text-to-speech-converter-app/index.html'),
         coming_soon_app: resolve(__dirname, 'projects/coming-soon-app/index.html'),
         image_background_transition_app: resolve(__dirname, 'projects/image-background-transition-app/index.html'),
-        mini_calendar_app: resolve(__dirname, 'projects/mini-calendar-app/index.html')
+        mini_calendar_app: resolve(__dirname, 'projects/mini-calendar-app/index.html'),
+        custom_select_box: resolve(__dirname, 'projects/custom-select-app/index.html')
       },
     },
   },
