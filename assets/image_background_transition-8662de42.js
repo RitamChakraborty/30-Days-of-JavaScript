@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";const s=document.querySelector(".slider"),l=document.querySelector(".layer1"),t=document.querySelector(".overlay"),c=t.clientWidth;t.addEventListener("mousemove",o=>{const e=o.offsetX/c*100;s.style.width=`${e}%`,l.style.clipPath=`polygon(0 0, ${e}% 0, ${e}% 100%, 0 100%)`});
