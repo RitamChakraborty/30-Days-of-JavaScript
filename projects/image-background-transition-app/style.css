@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+main {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 36rem;
+    width: calc(100% - 2rem);
+    aspect-ratio: 16 / 9;
+}
+
+main div {
+    position: absolute;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/background.png);
+}
+
+.slider {
+    border-right: 1px solid white;
+    width: 50%;
+    height: 100%;
+}
+
+.slider .btn {
+    position: absolute;
+    right: -1.1rem;
+    top: calc(50% - 1rem);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.btn span {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+    main {
+        max-width: 48rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    main {
+        max-width: 62rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    main {
+        max-width: 75rem;
+    }
+}
+
+@media screen and (min-width: 87.5rem) {
+    main {
+        max-width: 87.5rem;
+    }
+}
