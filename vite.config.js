@@ -31,7 +31,8 @@ export default defineConfig({
         coming_soon_app: resolve(__dirname, 'projects/coming-soon-app/index.html'),
         image_background_transition_app: resolve(__dirname, 'projects/image-background-transition-app/index.html'),
         mini_calendar_app: resolve(__dirname, 'projects/mini-calendar-app/index.html'),
-        custom_select_box: resolve(__dirname, 'projects/custom-select-box-app/index.html')
+        custom_select_box_app: resolve(__dirname, 'projects/custom-select-box-app/index.html'),
+        ciruclar_progress_bar_app: resolve(__dirname, 'projects/circular-progress-bar-app/index.html')
       },
     },
   },
