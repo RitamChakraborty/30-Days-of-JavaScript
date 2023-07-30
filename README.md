@@ -35,3 +35,4 @@ A 30 days JavaScript challenge hosted by [GreatStack YouTube Channel](https://ww
 | 23 | Mini Calendar App | [mini-calendar-app-ritam](https://mini-calendar-app-ritam.netlify.app/) | 27/07/2023 |
 | 24 | Custom Select Box App | [cutom-select-box-app-ritam](https://custom-select-box-app-ritam.netlify.app/) | 27/07/2023 |
 | 25 | Circular Progress Bar App | [circular-progress-bar-app-ritam](https://circular-progress-bar-app-ritam.netlify.app/) | 29/07/2023 |
+| 26 | Product Gallery App | [product-gallery-app-ritam](https://product-gallery-app-ritam.netlify.app/) | 29/07/2023 - 30/07/2023 |
