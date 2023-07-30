@@ -11,13 +11,13 @@
 <body>
     <main>
         <section class="section-1">
-            <img src="./assets/image-1.png" alt="image-1">
-            <img src="./assets/image-1.png" alt="image-2" hidden>
-            <img src="./assets/image-1.png" alt="image-3" hidden>
+            <img src="./assets/image-1.png" alt="image-1" class="image-1" data-visible="true">
+            <img src="./assets/image-2.png" alt="image-2" class="image-2" data-visible="false">
+            <img src="./assets/image-3.png" alt="image-3" class="image-3" data-visible="false">
             <div class="image-changer">
-                <button class="switch-1"></button>
-                <button class="swtich-2"></button>
-                <button class="swtich-3"></button>
+                <button class="switch-1" data-enabled="true"></button>
+                <button class="swtich-2" data-enabled="false"></button>
+                <button class="swtich-3" data-enabled="false"></button>
             </div>
         </section>
         <section class="section-2">
@@ -54,6 +54,7 @@
             <button>Buy Now</button>
         </section>
     </main>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

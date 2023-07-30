@@ -18,6 +18,10 @@ main {
     margin-inline: auto;
 }
 
+[data-visible='false'] {
+    display: none;
+}
+
 .section-1 {
     position: relative;
     height: clamp(40rem, 100vh, 60rem);
@@ -47,6 +51,10 @@ main {
     padding: 0;
     border: none;
     background-color: grey;
+}
+
+[data-enabled='true'] {
+    background-color: blue !important;
 }
 
 .section-2 {
