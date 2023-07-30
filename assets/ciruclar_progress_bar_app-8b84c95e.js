@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";const t=472,r=document.querySelector("#value"),l=document.querySelector("circle");window.addEventListener("load",()=>{let e=t;const n=165,o=setInterval(()=>{l.style.strokeDashoffset=e--;const c=Math.floor((t-e)*100/t);r.textContent=c,e==n&&clearInterval(o)},10)});
