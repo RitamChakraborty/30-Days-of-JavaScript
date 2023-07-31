@@ -33,7 +33,8 @@ export default defineConfig({
         mini_calendar_app: resolve(__dirname, 'projects/mini-calendar-app/index.html'),
         custom_select_box_app: resolve(__dirname, 'projects/custom-select-box-app/index.html'),
         ciruclar_progress_bar_app: resolve(__dirname, 'projects/circular-progress-bar-app/index.html'),
-        product_gallery_app: resolve(__dirname, 'projects/product-gallery-app/index.html')
+        product_gallery_app: resolve(__dirname, 'projects/product-gallery-app/index.html'),
+        cryptocurrency_website_app: resolve(__dirname, 'projects/cryptocurrency-website-app/index.html')
       },
     },
   },
