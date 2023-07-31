@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";function e(){const t=new Date;document.querySelector("#hour").textContent=t.getHours().toString().padStart(2,"0"),document.querySelector("#minute").textContent=t.getMinutes().toString().padStart(2,"0"),document.querySelector("#second").textContent=t.getSeconds().toString().padStart(2,"0")}e();setInterval(e,1e3);
