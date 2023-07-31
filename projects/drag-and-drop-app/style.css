@@ -1,0 +1,49 @@
+body {
+    background-color: #041C32;
+    font-family: sans-serif;
+}
+
+main {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: min-content;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container {
+    height: 17rem;
+    width: 15.5rem;
+    border: dotted #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.draggable {
+    height: 3rem;
+    width: 15rem;
+    background-color: #F15A59;
+    color: #FAFAFA;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding-left: 0.5rem;
+    cursor: move;
+}
+
+@media screen and (min-width: 45rem) {
+    main {
+        flex-direction: row;
+    }
+}
+
+.dragging {
+    opacity: 0.8;
+}
