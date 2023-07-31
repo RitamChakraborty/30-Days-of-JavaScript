@@ -15,15 +15,14 @@ main {
 }
 
 .container {
-    height: 17rem;
+    height: 15rem;
     width: 15.5rem;
     border: dotted #FAFAFA;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 
 .draggable {
@@ -45,5 +44,5 @@ main {
 }
 
 .dragging {
-    opacity: 0.8;
+    opacity: 0.5;
 }
