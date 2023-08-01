@@ -37,7 +37,7 @@ export default defineConfig({
         cryptocurrency_website_app: resolve(__dirname, 'projects/cryptocurrency-website-app/index.html'),
         digital_clock_app: resolve(__dirname, 'projects/digital-clock-app/index.html'),
         drag_and_drop_app: resolve(__dirname, 'projects/drag-and-drop-app/index.html'),
-        image_search_engine_app: resolve(__dirname, 'projects/image-serach-engine-app/index.html')
+        image_search_engine_app: resolve(__dirname, 'projects/image-search-engine-app/index.html')
       },
     },
   },
