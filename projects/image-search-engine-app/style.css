@@ -23,7 +23,7 @@ form {
 }
 
 input {
-    width: 15rem;
+    width: min(80vw, 20rem);
     padding: 1rem;
     border-radius: 0.25rem 0 0 0.25rem;
     background-color: rgba(255, 255, 255, 0.1);
@@ -56,6 +56,7 @@ input, button {
 .images {
     display: grid;
     gap: 2rem;
+    align-items: center;
 }
 
 img {
@@ -66,4 +67,16 @@ img {
     padding: 0.75rem 1rem;
     width: max-content;
     border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 87.5rem) {
+    .images {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
