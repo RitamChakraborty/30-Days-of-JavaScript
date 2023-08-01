@@ -1,0 +1,69 @@
+body {
+    background-color: #4c4585;
+    font-family: sans-serif;
+}
+
+main {
+    max-width: 36rem;
+    margin-inline: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+h1 {
+    color: #FAFAFA;
+    margin: 0;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FAFAFA;
+}
+
+input::placeholder {
+    color: #FAFAFA;
+}
+
+button {
+    width: 5rem;
+    background-color: #E2703A;
+    color: #FAFAFA;
+}
+
+input, button {
+    border: none;
+}
+
+:is(input, button):is(:focus, :active) {
+    border: none;
+    outline: none;
+}
+
+.search {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.images {
+    display: grid;
+    gap: 2rem;
+}
+
+img {
+    border-radius: 0.25rem;
+}
+
+.show-more {
+    padding: 0.75rem 1rem;
+    width: max-content;
+    border-radius: 0.25rem;
+}
